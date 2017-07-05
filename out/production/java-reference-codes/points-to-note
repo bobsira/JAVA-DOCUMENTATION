@@ -1,0 +1,305 @@
+class classname {
+
+type instance-variable1;
+type instance-variable2;
+
+//..
+type instance-variableN;
+
+type methodname1(parameter-list){
+//body of method
+}
+
+type methodname2(parameter-list){
+//body of method
+}
+
+//..
+
+type methodnameN(parameter-list){
+//body of method
+}
+}
+
+Declaring Objects
+Box mybox = new Box();
+OR
+Box mybox; // declare reference to object
+mybox = new Box(); // allocate a Box object
+
+class-var = new classname( );
+
+It is important to understand that new allocates memory for an object during run time.
+
+
+
+Assigning Object Reference Variables
+
+Box b1 = new Box();
+Box b2 = b1;
+
+b1 and b2 will both refer to the
+same object. The assignment of b1 to b2 did not allocate any memory or copy any part of the
+original object. It simply makes b2 refer to the same object as does b1. Thus, any changes
+made to the object through b2 will affect the object to which b1 is referring, since they are the
+same object
+
+Box b1 = new Box();
+Box b2 = b1;
+// ...
+b1 = null;
+Here, b1 has been set to null, but b2 still points to the original object.
+
+When you assign one object reference variable to another object reference variable,
+you are not creating a copy of the object, you are only making a copy of the reference.
+
+
+Introducing Methods
+This is the general form of a method:
+type name(parameter-list) {
+// body of method
+}
+Methods that have a return type other than void return a value to the calling routine using
+the following form of the return statement:
+return value;
+Here, value is the value returned.
+
+Returning a Value
+There are two important things to understand about returning values:
+• The type of data returned by a method must be compatible with the return type
+specified by the method. For example, if the return type of some method is boolean,
+you could not return an integer.
+• The variable receiving the value returned by a method (such as vol, in this case) must
+also be compatible with the return type specified for the method.
+
+Adding a Method That Takes Parameters
+
+
+
+The this Keyword
+Sometimes a method will need to refer to the object that invoked it. To allow this, Java defines
+the this keyword. this can be used inside any method to refer to the current object. That is,
+this is always a reference to the object on which the method was invoked. You can use this
+anywhere a reference to an object of the current class’ type is permitted.
+
+
+Garbage Collection
+Since objects are dynamically allocated by using the new operator, you might be wondering
+how such objects are destroyed and their memory released for later reallocation. In some
+languages, such as C++, dynamically allocated objects must be manually released by use of
+a delete operator. Java takes a different approach; it handles deallocation for you automatically.
+The technique that accomplishes this is called garbage collection. It works like this: when no
+references to an object exist, that object is assumed to be no longer needed, and the memory
+occupied by the object can be reclaimed. There is no explicit need to destroy objects as in C++.
+Garbage collection only occurs sporadically (if at all) during the execution of your program.
+It will not occur simply because one or more objects exist that are no longer used. Furthermore,
+different Java run-time implementations will take varying approaches to garbage collection,
+but for the most part, you should not have to think about it while writing your programs.
+
+
+The finalize( ) Method
+Sometimes an object will need to perform some action when it is destroyed. For example, if
+an object is holding some non-Java resource such as a file handle or character font, then you
+might want to make sure these resources are freed before an object is destroyed. To handle
+such situations, Java provides a mechanism called finalization. By using finalization, you can
+define specific actions that will occur when an object is just about to be reclaimed by the
+garbage collector.
+
+To add a finalizer to a class, you simply define the finalize( ) method. The Java run time
+calls that method whenever it is about to recycle an object of that class. Inside the finalize( )
+method, you will specify those actions that must be performed before an object is destroyed.
+The garbage collector runs periodically, checking for objects that are no longer referenced by
+any running state or indirectly through other referenced objects. Right before an asset is freed,
+the Java run time calls the finalize( ) method on the object.
+The finalize( ) method has this general form:
+protected void finalize( )
+{
+// finalization code here
+}
+
+
+
+
+Packages and Interfaces
+
+Packages are containers for classes that are used to keep the class name space
+compartmentalized.
+
+Through the use of the interface keyword, Java allows you to fully abstract the
+interface from its implementation.
+
+ Using interface, you can specify a set of methods that
+can be implemented by one or more classes. The interface, itself, does not actually define
+any implementation.
+
+Although they are similar to abstract classes, interfaces have an
+additional capability: A class can implement more than one interface.
+
+ By contrast, a class
+can only inherit a single superclass (abstract or otherwise).
+
+
+The package is both a naming and a visibility
+control mechanism.
+
+You can define classes inside a package that are not accessible by
+code outside that package.
+
+You can also define class members that are only exposed
+to other members of the same package.
+
+This allows your classes to have intimate
+knowledge of each other, but not expose that knowledge to the rest of the world.
+
+
+Classes and packages are both means of encapsulating and containing the name space
+and scope of variables and methods.
+
+Packages act as containers for classes and other
+subordinate packages.
+
+Classes act as containers for data and code. The class is Java’s
+smallest unit of abstraction.
+
+Because of the interplay between classes and packages, Java
+addresses four categories of visibility for class members:
+
+• Subclasses in the same package
+• Non-subclasses in the same package
+• Subclasses in different packages
+• Classes that are neither in the same package nor subclasses
+
+The three access specifiers, private, public, and protected, provide a variety of ways
+to produce the many levels of access required by these categories
+
+
+import java.util.*;
+class MyDate extends Date {
+}
+The same example without the import statement looks like this:
+class MyDate extends java.util.Date {
+}
+
+
+Using the keyword interface, you can fully abstract a class’ interface from its implementation.
+That is, using interface, you can specify what a class must do, but not how it does it. Interfaces
+are syntactically similar to classes, but they lack instance variables, and their methods are
+declared without any body.
+
+In practice, this means that you can define interfaces that don’t
+make assumptions about how they are implemented. Once it is defined, any number of
+classes can implement an interface.
+
+Also, one class can implement any number of interfaces.
+To implement an interface, a class must create the complete set of methods defined by
+the interface. However, each class is free to determine the details of its own implementation.
+
+By providing the interface keyword, Java allows you to fully utilize the “one interface,
+multiple methods” aspect of polymorphism.
+
+Interfaces are designed to support dynamic method resolution at run time. Normally,
+in order for a method to be called from one class to another, both classes need to be present
+at compile time so the Java compiler can check to ensure that the method signatures are
+compatible.
+
+This requirement by itself makes for a static and nonextensible classing
+environment. Inevitably in a system like this, functionality gets pushed up higher and higher
+in the class hierarchy so that the mechanisms will be available to more and more subclasses.
+Interfaces are designed to avoid this problem.
+
+They disconnect the definition of a method or
+set of methods from the inheritance hierarchy. Since interfaces are in a different hierarchy from
+classes, it is possible for classes that are unrelated in terms of the class hierarchy to implement
+the same interface. This is where the real power of interfaces is realized.
+
+Defining an Interface
+An interface is defined much like a class. This is the general form of an interface:
+access interface name {
+return-type method-name1(parameter-list);
+return-type method-name2(parameter-list);
+type final-varname1 = value;
+type final-varname2 = value;
+// ...
+return-type method-nameN(parameter-list);
+type final-varnameN = value;
+}
+When no access specifier is included, then default access results, and the interface is only
+available to other members of the package in which it is declared. When it is declared as
+public, the interface can be used by any other code. In this case, the interface must be the
+only public interface declared in the file, and the file must have the same name as the interface.
+name is the name of the interface, and can be any valid identifier. Notice that the methods that
+are declared have no bodies. They end with a semicolon after the parameter list. They are,
+essentially, abstract methods; there can be no default implementation of any method specified
+within an interface. Each class that includes an interface must implement all of the methods.
+Variables can be declared inside of interface declarations. They are implicitly final and
+static, meaning they cannot be changed by the implementing class. They must also be
+initialized. All methods and variables are implicitly public.
+Here is an example of an interface definition. It declares a simple interface that contains
+one method called callback( ) that takes a single integer parameter.
+
+interface Callback {
+void callback(int param);
+}
+
+Implementing Interfaces
+Once an interface has been defined, one or more classes can implement that interface. To
+implement an interface, include the implements clause in a class definition, and then create
+the methods defined by the interface. The general form of a class that includes the implements
+clause looks like this:
+class classname [extends superclass] [implements interface [,interface...]] {
+// class-body
+}
+If a class implements more than one interface, the interfaces are separated with a comma. If
+a class implements two interfaces that declare the same method, then the same method will
+be used by clients of either interface. The methods that implement an interface must be
+declared public. Also, the type signature of the implementing method must match exactly
+the type signature specified in the interface definition.
+Here is a small example class that implements the Callback interface shown earlier.
+
+class Client implements Callback {
+// Implement Callback's interface
+public void callback(int p) {
+System.out.println("callback called with " + p);
+}
+}
+Notice that callback( ) is declared using the public access specifier.
+
+Accessing Implementations Through Interface References
+You can declare variables as object references that use an interface rather than a class type.
+Any instance of any class that implements the declared interface can be referred to by such
+a variable. When you call a method through one of these references, the correct version will
+be called based on the actual instance of the interface being referred to. This is one of the
+key features of interfaces. The method to be executed is looked up dynamically at run time,
+allowing classes to be created later than the code which calls methods on them. The calling
+code can dispatch through an interface without having to know anything about the “callee.”
+
+Partial Implementations
+If a class includes an interface but does not fully implement the methods defined by that
+interface, then that class must be declared as abstract.
+
+abstract class Incomplete implements Callback {
+int a, b;
+void show() {
+System.out.println(a + " " + b);
+}
+// ...
+}
+Here, the class Incomplete does not implement callback( ) and must be declared as abstract.
+Any class that inherits Incomplete must implement callback( ) or be declared abstract itself.
+
+Nested Interfaces
+An interface can be declared a member of a class or another interface. Such an interface is
+called a member interface or a nested interface. A nested interface can be declared as public,
+private, or protected.
+
+Variables in Interfaces
+You can use interfaces to import shared constants into multiple classes by simply declaring
+an interface that contains variables that are initialized to the desired values. When you
+include that interface in a class (that is, when you “implement” the interface), all of those
+variable names will be in scope as constants.
+
+Interfaces Can Be Extended
+One interface can inherit another by use of the keyword extends. The syntax is the same as
+for inheriting classes. When a class implements an interface that inherits another interface,
+it must provide implementations for all methods defined within the interface inheritance
+chain.
