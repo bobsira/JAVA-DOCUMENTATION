@@ -52,4 +52,24 @@ public class Stats<T extends Number> {
 
         return sum / nums.length;
     }
+
+    /**
+     * This won't work!
+     * Determine if two averages are the same.
+     * boolean sameAvg(Stats<T> ob){
+     * if(average() == ob.average())
+     * return true;
+     * <p>
+     * return false;
+     * }
+     */
+
+    // Determine if the two averages are the same.
+    // Notice the use of the wildcard.
+    boolean sameAvg(Stats<?> ob) {
+        if (average() == ob.average())
+            return true;
+
+        return false;
+    }
 }
