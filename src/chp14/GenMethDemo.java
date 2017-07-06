@@ -11,8 +11,5 @@ public class GenMethDemo {
             if (x.equals(y[i])) return true;
         return false;
     }
-
-    public static void main(String[] args) {
-        
-    }
+    
 }
