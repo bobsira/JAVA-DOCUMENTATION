@@ -6,4 +6,9 @@ package chp14;
  */
 public class GenMethDemo {
     // Determine if an object is in an array
+    static <T extends Comparable<T>, V extends T> boolean isIn(T x, V[] y) {
+        for (int i = 0; i < y.length; i++)
+            if (x.equals(y[i])) return true;
+        return false;
+    }
 }
