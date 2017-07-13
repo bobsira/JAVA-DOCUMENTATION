@@ -1,4 +1,4 @@
-package StringHandling;
+package ch16;
 
 /**
  * Created by bobsira on 6/14/17.

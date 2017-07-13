@@ -1,4 +1,4 @@
-package StringHandling;
+package ch16;
 
 /**
  * Created by bobsira on 6/15/17.
@@ -6,7 +6,7 @@ package StringHandling;
  */
 public class SortString {
     static String arr[] = {
-            "Now", "is", "the", "time", "for", "all", "good", "men",
+            "now", "is", "the", "time", "for", "all", "good", "men",
             "to", "come", "to", "the", "aid", "of", "their", "country"
     };
 

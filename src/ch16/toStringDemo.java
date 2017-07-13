@@ -1,4 +1,6 @@
-package StringHandling;
+package ch16;
+
+import ch16.Box;
 
 /**
  * Created by bobsira on 6/15/17.
