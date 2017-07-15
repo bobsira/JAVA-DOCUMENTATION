@@ -1,4 +1,4 @@
-package ch16;
+package chp16;
 
 /**
  * Created by bobsira on 7/12/17.

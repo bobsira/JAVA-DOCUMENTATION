@@ -1,4 +1,4 @@
-package ch16;
+package chp16;
 
 import java.io.BufferedReader;
 import java.io.IOException;

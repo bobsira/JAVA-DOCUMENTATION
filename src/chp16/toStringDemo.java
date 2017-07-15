@@ -1,6 +1,4 @@
-package ch16;
-
-import ch16.Box;
+package chp16;
 
 /**
  * Created by bobsira on 6/15/17.
