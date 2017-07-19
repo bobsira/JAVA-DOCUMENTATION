@@ -28,10 +28,14 @@ public class ObjectSortingExample {
 
         Student[] studentArray = new Student[3];
         studentArray[0] = new Student(1, "Nikos", 1);
-        studentArray[0] = new Student(5, "Ilias", 4);
-        studentArray[0] = new Student(4, "Byron", 5);
+        studentArray[1] = new Student(5, "Ilias", 4);
+        studentArray[2] = new Student(4, "Byron", 5);
 
-        Arrays.sort(studentArray);
-        System.out.println(Arrays.toString(studentArray));
+        Arrays.sort(studentArray, Student.idComperator);
+        System.out.println("Using id as key :" + Arrays.toString(studentArray));
+
+        Arrays.sort(studentArray, Student.currentYearComperator);
+        System.out.println("Using Current Year of Study as key :" + Arrays.toString(studentArray));
+        ;
     }
 }
