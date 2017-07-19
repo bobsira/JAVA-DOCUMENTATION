@@ -30,5 +30,16 @@ public class HashMapEntrySetExample {
 
         // print the values which the set contains
         System.out.println("New set of keys:" + mappingSet);
+
+        /**
+         * How to efficiently iterate over each Entry in a Map?
+         */
+        System.out.println();
+
+        for (Map.Entry<Integer, String> entry : mapEmployee.entrySet()) {
+            System.out.println(entry.getKey() + "->" + entry.getValue());
+        }
+
+
     }
 }
