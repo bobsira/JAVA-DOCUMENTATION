@@ -22,6 +22,11 @@ public class OldStyle {
         list.add("three");
         list.add("four");
 
+        /**
+         * wrong
+         */
+        list.add(new Integer(100));
+
         Iterator iterator = list.iterator();
         while (iterator.hasNext()) {
             /**
