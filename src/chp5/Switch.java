@@ -30,7 +30,7 @@ public class Switch {
                 break;
             default:
                 season = "Bogus Month";
-
         }
+        System.out.println("April is in the " + season + ".");
     }
 }
