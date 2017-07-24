@@ -9,5 +9,9 @@ public class ForTick {
 
         for (n = 10; n > 0; n--)
             System.out.println("tick " + n);
+
+        // here, n is declared inside of the for loop
+        for (int k = 10; k > 0; k--)
+            System.out.println("tick " + k);
     }
 }
