@@ -36,13 +36,19 @@ public class BoxDemo {
          */
 //        vol = mybox1.width * mybox1.height * mybox1.depth;
 //        System.out.println("Volume is " + vol);
-        mybox1.volume();
+//        mybox1.volume();
+        vol = mybox1.volume();
+        System.out.println("Volume is " + vol);
         /**
          * compute volume of second box
          */
 //        vol = mybox2.width * mybox2.height * mybox2.depth;
 //        System.out.println("Volume is " + vol);
         // display volume of second box
-        mybox2.volume();
+//        mybox2.volume();
+        vol = mybox2.volume();
+        System.out.println("Volume is " + vol);
+
+
     }
 }
