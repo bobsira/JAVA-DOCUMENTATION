@@ -8,7 +8,7 @@ public class Box {
     double height;
     double depth;
 
-    //    display volume of a box
+    //display volume of a box
     public void volume() {
         System.out.print("Volume is ");
         System.out.println(width * height * depth);
