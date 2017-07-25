@@ -1,9 +1,9 @@
-package Introducingclasses;
+package chp6;
 
 /**
  * Created by bobsira on 6/1/17.
  */
-public class BoxDemo4 {
+public class BoxDemo2 {
     public static void main(String args[]) {
         Box mybox1 = new Box();
         Box mybox2 = new Box();
@@ -17,12 +17,11 @@ instance variables */
         mybox2.width = 3;
         mybox2.height = 6;
         mybox2.depth = 9;
-// get volume of first box
-//        vol = mybox1.volume();
-//        System.out.println("Volume is " + vol);
-        System.out.println("Volume is " + mybox1.volume());
-// get volume of second box
-        vol = mybox2.volume();
+// compute volume of first box
+        vol = mybox1.width * mybox1.height * mybox1.depth;
+        System.out.println("Volume is " + vol);
+// compute volume of second box
+        vol = mybox2.width * mybox2.height * mybox2.depth;
         System.out.println("Volume is " + vol);
     }
 }

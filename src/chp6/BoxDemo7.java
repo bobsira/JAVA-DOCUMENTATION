@@ -1,13 +1,13 @@
-package Introducingclasses;
+package chp6;
 
 /**
  * Created by bobsira on 6/1/17.
  */
-public class BoxDemo6 {
+public class BoxDemo7 {
     public static void main(String args[]) {
 // declare, allocate, and initialize Box objects
-        Box mybox1 = new Box();
-        Box mybox2 = new Box();
+        Box mybox1 = new Box(10, 20, 15);
+        Box mybox2 = new Box(3, 6, 9);
         double vol;
 // get volume of first box
         vol = mybox1.volume();

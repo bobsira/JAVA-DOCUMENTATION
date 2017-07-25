@@ -1,4 +1,4 @@
-package Introducingclasses;
+package chp6;
 
 /**
  * Created by bobsira on 6/1/17.
