@@ -24,4 +24,17 @@ public class Box {
     public double volume() {
         return width * height * depth;
     }
+
+    /**
+     * sets dimensions of box
+     *
+     * @param w
+     * @param h
+     * @param d
+     */
+    void setDim(double w, double h, double d) {
+        width = w;
+        height = h;
+        depth = d;
+    }
 }
