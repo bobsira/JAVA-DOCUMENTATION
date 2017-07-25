@@ -1,17 +1,11 @@
 package chp6;
 
 /**
- * Created by bobsira on 6/1/17.
- *
- */
-
-
-/** A program that uses the Box class.
- * Call this file BoxDemo.java
+ * Created by bobsira on 7/25/17.
  */
 public class BoxDemo {
     public static void main(String[] args) {
-        Box mybox=new Box();
+        Box1 mybox = new Box1();
         double vol;
 
         //assigning values to mybox's instance variables
