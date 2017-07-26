@@ -25,4 +25,10 @@ public class Test {
         i *= 2;
         j /= 2;
     }
+
+    // pass an object
+    void meth(Test o) {
+        o.a *= 2;
+        o.b /= 2;
+    }
 }
