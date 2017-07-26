@@ -5,9 +5,9 @@ package chp6;
  */
 public class BoxDemo7 {
     public static void main(String args[]) {
-// declare, allocate, and initialize Box objects
-        Box mybox1 = new Box(10, 20, 15);
-        Box mybox2 = new Box(3, 6, 9);
+// declare, allocate, and initialize Box1 objects
+        Box1 mybox1 = new Box1(10, 20, 15);
+        Box1 mybox2 = new Box1(3, 6, 9);
         double vol;
 // get volume of first box
         vol = mybox1.volume();

@@ -5,8 +5,8 @@ package chp6;
  */
 public class BoxDemo3 {
     public static void main(String args[]) {
-        Box mybox1 = new Box();
-        Box mybox2 = new Box();
+        Box1 mybox1 = new Box1();
+        Box1 mybox2 = new Box1();
 // assign values to mybox1's instance variables
         mybox1.width = 10;
         mybox1.height = 20;
