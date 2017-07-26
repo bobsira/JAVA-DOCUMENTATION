@@ -9,6 +9,10 @@ public class OverloadCons {
         Box mybox1 = new Box(10, 20, 15);
         Box mybox2 = new Box();
         Box mycube = new Box(7);
+
+        Box myclone = new Box(mybox1); // create copy of mybox1
+
+
         double vol;
         // get volume of first box
         vol = mybox1.volume();
@@ -19,5 +23,8 @@ public class OverloadCons {
         // get volume of cube
         vol = mycube.volume();
         System.out.println("Volume of mycube is " + vol);
+        // get volume of clone
+        vol = myclone.volume();
+        System.out.println("Volume of clone is " + vol);
     }
 }

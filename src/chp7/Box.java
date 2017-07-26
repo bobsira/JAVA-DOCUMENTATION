@@ -8,6 +8,13 @@ public class Box {
     double height;
     double depth;
 
+    // Notice this constructor. It takes an object of type Box.
+    Box(Box ob) { // pass object to constructor
+        width = ob.width;
+        height = ob.height;
+        depth = ob.depth;
+    }
+
     // constructor used when all dimensions specified
     Box(double w, double h, double d) {
         width = w;
