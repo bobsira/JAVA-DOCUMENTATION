@@ -8,6 +8,14 @@ public class Box {
     double height;
     double depth;
 
+    // This is the constructor for Box.
+    Box() {
+        System.out.println("Constructing Box");
+        width = 10;
+        height = 10;
+        depth = 10;
+    }
+
     /**
      * display volume of a box
      */
