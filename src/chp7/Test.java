@@ -15,6 +15,15 @@ public class Test {
 
     }
 
+    Test(int i) {
+        a = i;
+    }
+
+    Test incrByTen() {
+        Test temp = new Test(a + 10);
+        return temp;
+    }
+
     // return true if o is equal to the invoking object
     boolean equalTo(Test o) {
         if (o.a == a && o.b == b) return true;
