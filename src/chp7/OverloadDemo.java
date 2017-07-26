@@ -8,10 +8,6 @@ public class OverloadDemo {
         System.out.println("No parameters");
     }
 
-    // Overload test for one integer parameter.
-    void test(int a) {
-        System.out.println("a: " + a);
-    }
 
     // Overload test for two integer parameters.
     void test(int a, int b) {
