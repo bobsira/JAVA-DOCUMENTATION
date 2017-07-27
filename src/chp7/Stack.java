@@ -13,6 +13,11 @@ public class Stack {
     private int stck[] = new int[10];
     private int tos;
 
+    // allocate and initialize stack
+    Stack(int size) {
+        stck = new int[size];
+        tos = -1;
+    }
     // Initialize the top of the stack
     Stack() {
         tos = -1;
@@ -20,7 +25,7 @@ public class Stack {
 
     // push an item onto the stack
     void push(int item) {
-        if (tos == 9)
+        if (tos == stck.length - 1) // use length member
             System.out.println("Stack is full");
         else
             stck[++tos] = item;
