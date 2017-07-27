@@ -20,5 +20,11 @@ public class StringDemo {
             System.out.println("strOb1 == strOb3");
         else
             System.out.println("strOb1 != strOb3");
+
+
+        String str[] = {"one", "two", "three"};
+
+        for (int i = 0; i < str.length; i++)
+            System.out.println("str[" + i + "]: " + str[i]);
     }
 }
