@@ -9,6 +9,10 @@ public class B extends A {
     int total;
     int k;
 
+    B() {
+        System.out.println("Inside B's constructor.");
+    }
+
     void showk() {
         //System.out.println("k: " + k);
         //total = i + j;  // Error, j is not accessible here
