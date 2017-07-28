@@ -10,7 +10,7 @@ public class SimpleInheritance {
 
         // The superclass may be used by itself.
         superOb.i = 10;
-        superOb.j = 20;
+        // superOb.j = 20; // Error, j is not accessible here
         System.out.println("Contents of superOb: ");
         superOb.showij();
         System.out.println();
@@ -19,7 +19,7 @@ public class SimpleInheritance {
          * The subclass has access to all public members of its superclass
          */
         subOb.i = 7;
-        subOb.j = 8;
+        //  subOb.j = 8; // Error, j is not accessible here
         subOb.k = 9;
 
         System.out.println("Contents of subOb: ");

@@ -5,13 +5,16 @@ package chp8;
  * Create a subclass by extending class A
  */
 public class B extends A {
+    // A's j is not accessible here.
+    int total;
     int k;
 
     void showk() {
-        System.out.println("k: " + k);
+        //System.out.println("k: " + k);
+        //total = i + j;  // Error, j is not accessible here
     }
 
     void sum() {
-        System.out.println("i+j+k: " + (i + j + k));
+        //System.out.println("i+j+k: " + (i + j + k)); // Error, j is not accessible here
     }
 }
