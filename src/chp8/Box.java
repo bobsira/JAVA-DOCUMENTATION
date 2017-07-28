@@ -2,11 +2,13 @@ package chp8;
 
 /**
  * Created by bobsira on 7/28/17.
+ *
+ * A complete implementation of BoxWeight
  */
 public class Box {
-    double width;
-    double height;
-    double depth;
+    private double width;
+    private double height;
+    private double depth;
 
     // construct clone of an object
     Box(Box ob) { // pass object to constructor

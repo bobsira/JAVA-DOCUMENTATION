@@ -7,9 +7,10 @@ public class ColorBox extends Box {
     int color; // color of box
 
     ColorBox(double width, double height, double depth, int color) {
-        this.width = width;
-        this.height = height;
-        this.depth = depth;
+        super(width, height, depth);
+        //this.width = width;
+        //this.height = height;
+        //this.depth = depth;
         this.color = color;
     }
 }
