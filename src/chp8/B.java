@@ -13,11 +13,22 @@ public class B extends A {
         System.out.println("Inside B's constructor.");
     }
 
+    B(int a, int b, int k) {
+        super(a, b);
+        this.k = k;
+    }
+
+
     void showk() {
-        //System.out.println("k: " + k);
+        System.out.println("k: " + k);
         //total = i + j;  // Error, j is not accessible here
     }
 
+    // display k – this overrides show() in A
+    void show() {
+        super.show();  // this calls A's show()
+        System.out.println("k: " + k);
+    }
     void sum() {
         //System.out.println("i+j+k: " + (i + j + k)); // Error, j is not accessible here
     }
