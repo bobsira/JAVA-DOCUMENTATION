@@ -3,7 +3,7 @@ package chp8;
 /**
  * Created by bobsira on 7/29/17.
  */
-public class Figure {
+abstract class Figure {
     protected double dim1;
     protected double dim2;
 
@@ -12,8 +12,10 @@ public class Figure {
         this.dim2 = dim2;
     }
 
-    double area() {
-        System.out.println("Area for Figure is undefined.");
-        return 0;
-    }
+    // area is now abstract method
+    abstract double area();
+//    double area() {
+//        System.out.println("Area for Figure is undefined.");
+//        return 0;
+//    }
 }

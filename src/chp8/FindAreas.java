@@ -5,10 +5,10 @@ package chp8;
  */
 public class FindAreas {
     public static void main(String[] args) {
-        Figure figure = new Figure(10, 10);
+        //Figure figure = new Figure(10, 10);  // illegal now
         Rectangle rectangle = new Rectangle(9, 5);
         Triangle triangle = new Triangle(10, 8);
-        Figure figref;
+        Figure figref;  // this is ok, no object created
 
         figref = rectangle;
         System.out.println("Area is " + figref.area());
@@ -16,7 +16,7 @@ public class FindAreas {
         figref = triangle;
         System.out.println("Area is " + figref.area());
 
-        figref = figure;
-        System.out.println("Area is " + figref.area());
+        //figref = figure;
+        //System.out.println("Area is " + figref.area());
     }
 }
