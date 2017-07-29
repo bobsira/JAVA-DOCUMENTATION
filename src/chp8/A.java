@@ -32,4 +32,8 @@ public class A {
     void show() {
         System.out.println("i and j: " + i + " " + j);
     }
+
+    void callme() {
+        System.out.println("Inside A's callme method");
+    }
 }

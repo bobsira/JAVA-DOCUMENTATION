@@ -29,7 +29,17 @@ public class B extends A {
         super.show();  // this calls A's show()
         System.out.println("k: " + k);
     }
+
+    // overload show()
+    void show(String msg) {
+        System.out.println(msg + k);
+    }
     void sum() {
         //System.out.println("i+j+k: " + (i + j + k)); // Error, j is not accessible here
+    }
+
+    // override callme()
+    void callme() {
+        System.out.println("Inside B's callme method");
     }
 }
