@@ -36,4 +36,8 @@ public class A {
     void callme() {
         System.out.println("Inside A's callme method");
     }
+
+    final void fmeth() {
+        System.out.println("This is a final method");
+    }
 }
