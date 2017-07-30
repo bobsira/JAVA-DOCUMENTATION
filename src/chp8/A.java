@@ -3,7 +3,7 @@ package chp8;
 /**
  * Created by bobsira on 7/28/17.
  * create a superclass
- *
+ * <p>
  * Create a super class
  */
 public class A {
@@ -40,4 +40,11 @@ public class A {
     final void fmeth() {
         System.out.println("This is a final method");
     }
+
+    /**
+     *  final class A {
+     *      // ..
+     *  }
+     */
 }
+

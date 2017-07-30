@@ -48,4 +48,10 @@ public class B extends A {
     //    System.out.println("Illegal");
     //}
 
+    /**
+     * The following class is illegal.
+     * class B extends A { // ERROR! Can't subclass A
+     *     // ...
+     * }
+     */
 }
