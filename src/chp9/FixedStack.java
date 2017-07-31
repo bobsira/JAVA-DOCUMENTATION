@@ -1,7 +1,5 @@
 package chp9;
 
-import PackagesInterfaces.IntStack;
-
 /**
  * Created by bobsira on 6/13/17.
  * An implementation of IntStack that uses fixed storage.
