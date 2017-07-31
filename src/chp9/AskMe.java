@@ -1,11 +1,11 @@
-package PackagesInterfaces;
+package chp9;
 
 /**
- * Created by bobsira on 6/14/17.
+ * Created by bobsira on 7/31/17.
  */
 public class AskMe implements SharedConstants {
-    static void answer(int result){
-        switch (result){
+    static void answer(int result) {
+        switch (result) {
             case NO:
                 System.out.println("No");
                 break;
@@ -28,14 +28,11 @@ public class AskMe implements SharedConstants {
     }
 
     public static void main(String[] args) {
-        Question question=new Question();
-        answer(question.ask());
-        answer(question.ask());
-        answer(question.ask());
-        answer(question.ask());
-        answer(question.ask());
-        answer(question.ask());
-        answer(question.ask());
+        Question question = new Question();
 
+        answer(question.ask());
+        answer(question.ask());
+        answer(question.ask());
+        answer(question.ask());
     }
 }
