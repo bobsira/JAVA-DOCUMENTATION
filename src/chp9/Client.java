@@ -10,4 +10,13 @@ public class Client implements Callback {
         System.out.println("callback called with " + p);
     }
 
+    /**
+     * It is both permissible and common for classes that implement interfaces to define
+     * additional members of their own.
+     */
+    void nonIfaceMeth() {
+        System.out.println("Classes that implement interfaces " +
+                "may also define other members, too.");
+    }
+
 }
