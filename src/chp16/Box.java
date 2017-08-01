@@ -2,7 +2,7 @@ package chp16;
 
 /**
  * Created by bobsira on 6/15/17.
- * Override toString() for Box class.
+ * Override toString() for Box1 class.
  */
 public class Box {
     double width;
