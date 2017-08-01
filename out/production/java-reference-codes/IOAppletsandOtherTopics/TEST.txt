@@ -1,3 +1,0 @@
-In general, you should use the character stream classes when
-working with characters or strings, and use the byte stream classes when working with
-bytes or other binary objects
