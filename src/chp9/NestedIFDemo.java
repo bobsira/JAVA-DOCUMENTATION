@@ -1,7 +1,5 @@
 package chp9;
 
-import PackagesInterfaces.A;
-import PackagesInterfaces.B;
 
 /**
  * Created by bobsira on 6/13/17.

@@ -1,6 +1,7 @@
 package chp9.p2;
 
-import PackagesInterfaces.p1.Protection;
+
+import chp9.p1.Protection;
 
 /**
  * Created by bobsira on 6/12/17.
