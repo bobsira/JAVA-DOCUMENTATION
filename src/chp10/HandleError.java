@@ -17,6 +17,7 @@ public class HandleError {
                 a = 12345 / (b/c);
             } catch (ArithmeticException e){
                 System.out.println("Division by zero.");
+                System.out.println("Exception: " + e);
                 a = 0; // set a to zero and continue
             }
             System.out.println("a: " +a);
