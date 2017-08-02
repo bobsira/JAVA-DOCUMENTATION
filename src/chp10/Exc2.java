@@ -14,5 +14,6 @@ public class Exc2 {
         } catch (ArithmeticException e ){ // catch divide-by-zero error
             System.out.println("Division by zero.");
         }
+        System.out.println("After catch statement.");
     }
 }
