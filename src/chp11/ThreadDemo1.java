@@ -3,9 +3,9 @@ package chp11;
 /**
  * Created by bobsira on 8/4/17.
  */
-public class ThreaDdemo {
+public class ThreadDemo1 {
     public static void main(String[] args) {
-        new Newthread(); // create a new thread
+        new NewThread1(); // create a new thread
 
         try {
             for (int i =5; i > 0; i --){

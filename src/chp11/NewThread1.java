@@ -4,8 +4,8 @@ package chp11;
  * Created by bobsira on 8/4/17.
  * Create a second thread by extending Thread
  */
-public class Newthread extends Thread{
-    Newthread(){
+public class NewThread1 extends Thread{
+    NewThread1(){
         // Create a new, second thread
         super("Demo Thread");
         System.out.println("Child thread: " + this);
