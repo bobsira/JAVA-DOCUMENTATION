@@ -15,7 +15,14 @@ public class Caller implements Runnable {
         thread.start();
     }
 
+//    public void run(){
+//        target.call(msg);
+//    }
+
+    // synchronize calls to call()
     public void run(){
-        target.call(msg);
+        synchronized (target){ // synchronized block
+            target.call(msg);
+        }
     }
 }
