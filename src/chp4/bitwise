@@ -1,0 +1,9 @@
+>>	shift right
+>>>	shift right zero fill
+<<	shift left
+&=	Bitwise AND assignment
+|=	Bitwise OR assignment
+^=	Bitwise exclusive OR assignment
+>>=	Shift right assignment
+>>>=	Shift right zero fill assignment
+<<=	Shift left assignment.
