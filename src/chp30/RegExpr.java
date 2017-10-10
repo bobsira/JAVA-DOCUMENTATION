@@ -40,5 +40,15 @@ public class RegExpr {
             System.out.println("subsequence found");
         else
             System.out.println("No Match");
+
+        System.out.println();
+        /**
+         * Use find() to find multiple subdequences.
+         */
+        Pattern pattern1 = Pattern.compile("test");
+        Matcher matcher1 = pattern1.matcher("test 1 2 3 test");
+        while (matcher1.find()){
+            System.out.println("test found at index " + matcher1.start() + " at last index at " + matcher1.end());
+        }
     }
 }
