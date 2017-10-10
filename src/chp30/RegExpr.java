@@ -31,5 +31,14 @@ public class RegExpr {
             System.out.println("Matches");
         else
             System.out.println("No Match");
+
+        System.out.println();
+
+        System.out.println("Looking for Java in Java 8.");
+        matcher = pattern.matcher("Java 8");
+        if (matcher.find())
+            System.out.println("subsequence found");
+        else
+            System.out.println("No Match");
     }
 }
