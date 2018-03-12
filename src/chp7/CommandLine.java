@@ -9,3 +9,5 @@ public class CommandLine {
             System.out.println("args[" + i + "]: " + args[i]);
     }
 }
+
+// java chp7.CommandLine this is a test 100 -1
